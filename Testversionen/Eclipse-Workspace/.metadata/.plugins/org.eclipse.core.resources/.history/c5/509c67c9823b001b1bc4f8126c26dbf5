@@ -1,0 +1,61 @@
+import java.awt.Color;
+import javax.swing.*;
+import javax.swing.JFrame;
+import javax.swing.UIDefaults;
+import javax.swing.UIManager;
+import javax.swing.WindowConstants;
+import javax.swing.plaf.ColorUIResource;
+
+public class StartUp {
+	static int xSize = 2000;
+	static int ySize = 2000;
+	static int  xSizeMan = 1500;
+	static int ySizeMan = 1500;
+
+	//MyFrame
+	public static void main(String[] args) {
+		
+		JFrame frame = new Mandelbrot();
+		JPanel brot = new JPanel();
+		brot.setBounds(0, 0, xSizeMan, ySizeMan);
+		frame.add(brot);
+		
+		
+		
+		frame.setTitle("Et klappt!!!!");
+		frame.setSize(xSize, ySize);
+		
+		JPanel p1 = new JPanel();
+		p1.add(new JButton("Test"));
+		
+		frame.add(p1);
+		
+		frame.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
+		frame.setVisible(true);
+	}
+	
+	//SimpleFrame
+	/*public static void main(String[] args) {
+	    JFrame frame = new MyFrame();
+	    frame.setSize(200,300);
+	    frame.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
+	    frame.setUndecorated(true);
+	    frame.setVisible(true);
+	   }*/
+
+	public static  int getX() {
+		return xSizeMan;
+	}
+	public static  int getY() {
+		return ySizeMan;
+	}
+	public static double getMiddleX(){
+		double m = xSizeMan / 2;
+		return m;
+	}
+	public static double getMiddleY(){
+		double mw = ySizeMan / 2;
+		return mw;
+	}
+	
+}
